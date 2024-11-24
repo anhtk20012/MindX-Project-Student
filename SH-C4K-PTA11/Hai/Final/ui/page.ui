@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>300</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget_4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>300</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>300</width>
+      <height>600</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>300</width>
+      <height>600</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+	background-color: rgb(255, 255, 255);
+	border-radius: 20px;
+}</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>30</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="minimumSize">
+        <size>
+         <width>70</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../resource/image/left-arrow_5010437.png</normaloff>../resource/image/left-arrow_5010437.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>18</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(173, 176, 179);</string>
+       </property>
+       <property name="text">
+        <string>Invest in</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>Calibri</family>
+         <pointsize>20</pointsize>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="text">
+        <string>Public Top 20</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+border:none;</string>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>300</width>
+          <height>1000</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>1000</height>
+         </size>
+        </property>
+        <widget class="QWidget" name="widget_3" native="true">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>272</width>
+           <height>1000</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>272</width>
+           <height>1000</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QCheckBox" name="checkBox">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Bitcoin</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/bitcoin img.webp</normaloff>../resource/image/bitcoin img.webp</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="tristate">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_3">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Etherium</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/ethereum_9421326.png</normaloff>../resource/image/ethereum_9421326.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_5">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Binance Coin</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/bitcoin img.webp</normaloff>../resource/image/bitcoin img.webp</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_4">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Solana</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/solana_15301766.png</normaloff>../resource/image/solana_15301766.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_2">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Ripple</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/ripple.png</normaloff>../resource/image/ripple.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_6">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Vechain</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/vechain.png</normaloff>../resource/image/vechain.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_7">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Cardano</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/cardano_12533897.png</normaloff>../resource/image/cardano_12533897.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_8">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Polkadot</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/polkadot.png</normaloff>../resource/image/polkadot.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_9">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>ChainLink</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/chainlink.png</normaloff>../resource/image/chainlink.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_10">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Litecoin</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/digital-currency_15778370.png</normaloff>../resource/image/digital-currency_15778370.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_11">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Avalanche</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/Avalanche_logo_without_text.png</normaloff>../resource/image/Avalanche_logo_without_text.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_12">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Polygon</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/polygon-matic-glass-crypto-coin-3d-illustration-free-png.webp</normaloff>../resource/image/polygon-matic-glass-crypto-coin-3d-illustration-free-png.webp</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_13">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>DogeCoin</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/dogecoin_5245642.png</normaloff>../resource/image/dogecoin_5245642.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_14">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Shiba Inu</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/5994.png</normaloff>../resource/image/5994.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_15">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Tron</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/tron_15301821.png</normaloff>../resource/image/tron_15301821.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_17">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Filecoin</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/images-removebg-preview.png</normaloff>../resource/image/images-removebg-preview.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_16">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Cosmos</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/cosmos_12093080.png</normaloff>../resource/image/cosmos_12093080.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_18">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Uniswap</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/uniswap_15301831.png</normaloff>../resource/image/uniswap_15301831.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_19">
+            <property name="styleSheet">
+             <string notr="true">border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Aave</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/bd78b0b8-fbed-4146-9d87-50a2f2ed5825-1618897425-9eeb71edf1cd4eca826b03ef806908c2a8e408da.png</normaloff>../resource/image/bd78b0b8-fbed-4146-9d87-50a2f2ed5825-1618897425-9eeb71edf1cd4eca826b03ef806908c2a8e408da.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_20">
+            <property name="styleSheet">
+             <string>border-width: 2px;
+border-radius: 10px;
+background-color: rgb(244, 246, 249);</string>
+            </property>
+            <property name="text">
+             <string>Algorand</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../resource/image/algorand-algo-glass-crypto-coin-3d-illustration-free-png.webp</normaloff>../resource/image/algorand-algo-glass-crypto-coin-3d-illustration-free-png.webp</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>50</height>
+        </size>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>You have Inested In:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background-color: rgb(0, 255, 0);
+}
+QPushButton:hover{
+	background-color: rgb(0, 200, 0);
+}</string>
+          </property>
+          <property name="text">
+           <string>Continue</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>10</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
