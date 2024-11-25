@@ -60,12 +60,3 @@ class Login(QMainWindow):
                 )
         if reply == QMessageBox.StandardButton.Yes:
             self.close()
-
-if __name__ == "__main__":
-    from PyQt6.QtWidgets import QApplication
-    import sys
-    app = QApplication(sys.argv)
-    windows = Login()
-    windows.login_open()
-    app.exec()
-     
