@@ -231,6 +231,7 @@ QPushButton:hover {
       <font>
        <family>Segoe UI</family>
        <pointsize>12</pointsize>
+       <weight>75</weight>
        <italic>false</italic>
        <bold>true</bold>
        <underline>false</underline>
@@ -394,6 +395,39 @@ r</string>
       <string/>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color:rgb(231, 217, 182);
+    border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: rgb(116, 116, 116);
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Resource/Images/left arrow.png</normaloff>../Resource/Images/left arrow.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+    </widget>
     <zorder>label_5</zorder>
     <zorder>pushButton_6</zorder>
     <zorder>pushButton_10</zorder>
@@ -405,6 +439,7 @@ r</string>
     <zorder>pushButton_8</zorder>
     <zorder>pushButton_7</zorder>
     <zorder>pushButton</zorder>
+    <zorder>pushButton_2</zorder>
    </widget>
   </widget>
  </widget>

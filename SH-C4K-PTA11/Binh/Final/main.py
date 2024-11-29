@@ -2,7 +2,7 @@
 import sys, os
 from PyQt6 import QtCore
 from PyQt6.QtWidgets import QApplication, QWidget
-from src import welcome, welcome2, sign_in, sign_up, main_interface
+from src import welcome, welcome2, sign_in, sign_up, main_interface, camping, beach, kayak, mountain, yellowstoneNationalPark, moraineLake, wadiRum, jotunheimen, whiteBeach, mayaBay, success, navagioBeach, nusaDua, glacierBay, grandCanyon, dalmatianCoast, haLongBay, mountFuji, himalaya, alps, everest, menu
 # Hỗ trợ đường dẫn để không bị lỗi
 from pathlib import Path
 os.chdir(Path(__file__).parent)
@@ -13,7 +13,28 @@ class Signal(QWidget):
     signin = QtCore.pyqtSignal(QtCore.QPoint)
     signup = QtCore.pyqtSignal(QtCore.QPoint)
     main_interface = QtCore.pyqtSignal(QtCore.QPoint)
-    
+    camping = QtCore.pyqtSignal(QtCore.QPoint)
+    beach = QtCore.pyqtSignal(QtCore.QPoint)
+    kayak = QtCore.pyqtSignal(QtCore.QPoint)
+    mountain = QtCore.pyqtSignal(QtCore.QPoint)
+    yellowstoneNationalPark = QtCore.pyqtSignal(QtCore.QPoint)
+    moraineLake = QtCore.pyqtSignal(QtCore.QPoint)
+    wadiRum = QtCore.pyqtSignal(QtCore.QPoint)
+    jotunheimen = QtCore.pyqtSignal(QtCore.QPoint)
+    whiteBeach = QtCore.pyqtSignal(QtCore.QPoint)
+    mayaBay = QtCore.pyqtSignal(QtCore.QPoint)
+    success = QtCore.pyqtSignal(QtCore.QPoint)
+    navagioBeach = QtCore.pyqtSignal(QtCore.QPoint)
+    nusaDua = QtCore.pyqtSignal(QtCore.QPoint)
+    glacierBay = QtCore.pyqtSignal(QtCore.QPoint)
+    grandCanyon = QtCore.pyqtSignal(QtCore.QPoint)
+    dalmatianCoast = QtCore.pyqtSignal(QtCore.QPoint)
+    haLongBay = QtCore.pyqtSignal(QtCore.QPoint)
+    mountFuji = QtCore.pyqtSignal(QtCore.QPoint)
+    himalaya = QtCore.pyqtSignal(QtCore.QPoint)
+    alps = QtCore.pyqtSignal(QtCore.QPoint)
+    everest = QtCore.pyqtSignal(QtCore.QPoint)
+    menu = QtCore.pyqtSignal(QtCore.QPoint)
 class Main_App(QWidget):
     def __init__(self):
         # Khởi tạo signal và giao diện con
@@ -23,14 +44,56 @@ class Main_App(QWidget):
         self.signin = sign_in.Sign_in(self.signal)
         self.signup = sign_up.Sign_up(self.signal)
         self.main_interface = main_interface.Main_interface(self.signal)
-        
+        self.camping = camping.Camping(self.signal)
+        self.beach = beach.Beach(self.signal)
+        self.kayak = kayak.Kayak(self.signal)
+        self.mountain = mountain.Mountain(self.signal)
+        self.yellowstoneNationalPark = yellowstoneNationalPark.YellowstoneNationalPark(self.signal)
+        self.moraineLake = moraineLake.MoraineLake(self.signal)
+        self.wadiRum = wadiRum.WadiRum(self.signal)
+        self.jotunheimen = jotunheimen.Jotunheimen(self.signal)
+        self.whiteBeach = whiteBeach.WhiteBeach(self.signal)
+        self.mayaBay = mayaBay.MayaBay(self.signal)
+        self.success = success.Success(self.signal)
+        self.navagioBeach = navagioBeach.NavagioBeach(self.signal)
+        self.nusaDua = nusaDua.NusaDua(self.signal)
+        self.glacierBay = glacierBay.GlacierBay(self.signal)
+        self.grandCanyon = grandCanyon.GrandCanyon(self.signal)
+        self.dalmatianCoast = dalmatianCoast.DalmatianCoast(self.signal)
+        self.haLongBay = haLongBay.HaLongBay(self.signal)
+        self.mountFuji = mountFuji.MountFuji(self.signal)
+        self.himalaya = himalaya.Himalaya(self.signal)
+        self.alps = alps.Alps(self.signal)
+        self.everest = everest.Everest(self.signal)
+        self.menu = menu.Menu(self.signal)
         # Kiểm tra kết nối khi nhận emit
         self.signal.welcome.connect(self.welcome.welcome_open)
         self.signal.welcome2.connect(self.welcome2.welcome2_open)
         self.signal.signin.connect(self.signin.signin_open)
         self.signal.signup.connect(self.signup.signup_open)
         self.signal.main_interface.connect(self.main_interface.main_interface_open)
-    
+        self.signal.camping.connect(self.camping.camping_open)
+        self.signal.beach.connect(self.beach.beach_open)
+        self.signal.kayak.connect(self.kayak.kayak_open)
+        self.signal.mountain.connect(self.mountain.mountain_open)
+        self.signal.yellowstoneNationalPark.connect(self.yellowstoneNationalPark.yellowstoneNationalPark_open)
+        self.signal.moraineLake.connect(self.moraineLake.moraineLake_open)
+        self.signal.wadiRum.connect(self.wadiRum.wadiRum_open)
+        self.signal.jotunheimen.connect(self.jotunheimen.jotunheimen_open)
+        self.signal.whiteBeach.connect(self.whiteBeach.whiteBeach_open)
+        self.signal.mayaBay.connect(self.mayaBay.mayaBay_open)
+        self.signal.success.connect(self.success.success_open)
+        self.signal.navagioBeach.connect(self.navagioBeach.navagioBeach_open)
+        self.signal.nusaDua.connect(self.nusaDua.nusaDua_open)
+        self.signal.glacierBay.connect(self.glacierBay.glacierBay_open)
+        self.signal.grandCanyon.connect(self.grandCanyon.grandCanyon_open)
+        self.signal.dalmatianCoast.connect(self.dalmatianCoast.dalmatianCoast_open)
+        self.signal.haLongBay.connect(self.haLongBay.haLongBay_open)
+        self.signal.mountFuji.connect(self.mountFuji.mountFuji_open)
+        self.signal.alps.connect(self.alps.alps_open)
+        self.signal.everest.connect(self.everest.everest_open)
+        self.signal.himalaya.connect(self.himalaya.himalaya_open)
+        self.signal.menu.connect(self.menu.menu_open)
     def main_show(self):
         self.signal.welcome.emit()
         

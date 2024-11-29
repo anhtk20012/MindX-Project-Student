@@ -17,8 +17,34 @@ class Main_interface(QMainWindow):
         self.setWindowFlag(QtCore.Qt.WindowType.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WidgetAttribute.WA_TranslucentBackground)
         
+        self.ui.pushButton_2.clicked.connect(self.camping_show)
+        self.ui.pushButton_3.clicked.connect(self.beach_show)
+        self.ui.pushButton_4.clicked.connect(self.kayak_show)
+        self.ui.pushButton_5.clicked.connect(self.mountain_show)
+        self.ui.pushButton_8.clicked.connect(self.menu_show)
+        self.ui.pushButton_6.clicked.connect(self.everest_show)
+        self.ui.pushButton_7.clicked.connect(self.close_application)
     def main_interface_open(self):
         self.show()
+    def camping_show(self):
+        self.close()
+        self.signal.camping.emit(self.pos())
+    def beach_show(self):
+        self.close()
+        self.signal.beach.emit(self.pos())
+    def kayak_show(self):
+        self.close()
+        self.signal.kayak.emit(self.pos())
+    def mountain_show(self):
+        self.close()
+        self.signal.mountain.emit(self.pos())
+    def menu_show(self):
+        self.close()
+        self.signal.menu.emit(self.pos())
+    def everest_show(self):
+        self.close()
+        self.signal.everest.emit(self.pos())
+        
         
 # <-- Nâng cao cho chương trình -->
 # Giúp chương trình có thể di chuyển và lấy được vị trí cũ
@@ -54,7 +80,7 @@ class Main_interface(QMainWindow):
 #    from PyQt6.QtWidgets import QApplication
 #    import sys
 #    app = QApplication(sys.argv)
-#    windows = Welcome()
+#    windows = Main_interface()
 #    windows.show()
 #    app.exec()
     

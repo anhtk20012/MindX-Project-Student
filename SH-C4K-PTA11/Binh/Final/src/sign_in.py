@@ -76,7 +76,7 @@ class Sign_in(QMainWindow):
 #    from PyQt6.QtWidgets import QApplication
 #    import sys
 #    app = QApplication(sys.argv)
-#    windows = Welcome()
+#    windows = Sign_in()
 #    windows.show()
 #    app.exec()
     

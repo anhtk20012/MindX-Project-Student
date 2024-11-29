@@ -72,7 +72,7 @@ class Sign_up(QMainWindow):
 #    from PyQt6.QtWidgets import QApplication
 #    import sys
 #    app = QApplication(sys.argv)
-#    windows = Welcome()
+#    windows = Sign_up()
 #    windows.show()
 #    app.exec()
     
